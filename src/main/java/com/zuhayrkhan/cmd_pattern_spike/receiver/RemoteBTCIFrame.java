@@ -13,7 +13,7 @@ public class RemoteBTCIFrame {
                 Build JS
                 * For each Auth-Instruction
                   * Create IFrame
-                * Build DB Main IFrame
+                * Build BB Main IFrame
                   * Expecting n x values
                 """;
     }
@@ -25,7 +25,7 @@ public class RemoteBTCIFrame {
                 Build JS
                 * For each Auth-Instruction
                   * Create IFrame
-                * Build DB Main IFrame
+                * Build BB Main IFrame
                   * Expecting n x values
                 """;
     }

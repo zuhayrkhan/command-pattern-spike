@@ -10,7 +10,7 @@
 ## Receiver
 
 * Remote BTC IFrame
-* Remote DB IFrame
+* Remote BB IFrame
 
 ## Command
 
@@ -21,6 +21,6 @@
 * Issue GetAuthInstruction
 * Get result of submit auth
 
-#### DB
+#### BB
 
 * Issue submit auth 

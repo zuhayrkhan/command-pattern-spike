@@ -1,11 +1,11 @@
 package com.zuhayrkhan.cmd_pattern_spike.client;
 
+import com.zuhayrkhan.cmd_pattern_spike.command.remote.BB.IssueSubmitAuthOperation;
 import com.zuhayrkhan.cmd_pattern_spike.command.remote.btc.GetResultOfSubmitAuthOperation;
 import com.zuhayrkhan.cmd_pattern_spike.command.remote.btc.IssueGetAuthInstructionOperation;
-import com.zuhayrkhan.cmd_pattern_spike.command.remote.db.IssueSubmitAuthOperation;
 import com.zuhayrkhan.cmd_pattern_spike.invoker.RemoteIFrameOperationExecutor;
+import com.zuhayrkhan.cmd_pattern_spike.receiver.RemoteBBIFrame;
 import com.zuhayrkhan.cmd_pattern_spike.receiver.RemoteBTCIFrame;
-import com.zuhayrkhan.cmd_pattern_spike.receiver.RemoteDBIFrame;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -15,14 +15,14 @@ public class RemoteIFrameApplication {
 
     public static void main(String[] args) {
 
-        RemoteDBIFrame remoteDBIFrame = new RemoteDBIFrame();
+        RemoteBBIFrame remoteBBIFrame = new RemoteBBIFrame();
         RemoteBTCIFrame remoteBTCIFrame = new RemoteBTCIFrame();
 
         IssueGetAuthInstructionOperation issueGetAuthInstructionOperation =
                 new IssueGetAuthInstructionOperation(remoteBTCIFrame);
 
         IssueSubmitAuthOperation issueSubmitAuthOperation =
-                new IssueSubmitAuthOperation(remoteDBIFrame);
+                new IssueSubmitAuthOperation(remoteBBIFrame);
 
         GetResultOfSubmitAuthOperation getResultOfSubmitAuthOperation =
                 new GetResultOfSubmitAuthOperation(remoteBTCIFrame);

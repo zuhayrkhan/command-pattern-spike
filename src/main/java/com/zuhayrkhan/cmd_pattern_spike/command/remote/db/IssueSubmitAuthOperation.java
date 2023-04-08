@@ -1,19 +1,19 @@
-package com.zuhayrkhan.cmd_pattern_spike.command.remote.db;
+package com.zuhayrkhan.cmd_pattern_spike.command.remote.BB;
 
 import com.zuhayrkhan.cmd_pattern_spike.command.remote.RemoteIFrameOperation;
-import com.zuhayrkhan.cmd_pattern_spike.receiver.RemoteDBIFrame;
+import com.zuhayrkhan.cmd_pattern_spike.receiver.RemoteBBIFrame;
 
 public class IssueSubmitAuthOperation implements RemoteIFrameOperation {
 
-    private final RemoteDBIFrame remoteDBIFrame;
+    private final RemoteBBIFrame remoteBBIFrame;
 
-    public IssueSubmitAuthOperation(RemoteDBIFrame remoteDBIFrame) {
-        this.remoteDBIFrame = remoteDBIFrame;
+    public IssueSubmitAuthOperation(RemoteBBIFrame remoteBBIFrame) {
+        this.remoteBBIFrame = remoteBBIFrame;
     }
 
     @Override
     public String execute() {
-        return remoteDBIFrame.issueSubmitAuthCommand();
+        return remoteBBIFrame.issueSubmitAuthCommand();
     }
 
 }
